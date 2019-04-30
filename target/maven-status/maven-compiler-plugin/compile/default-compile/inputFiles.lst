@@ -1,5 +1,8 @@
 /home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Propriedade.java
-/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador.java
-/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/ExcecaoDeDominio.java
+/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador/Impulsivo.java
+/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador/Exigente.java
+/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador/Aleatorio.java
+/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador/Cauteloso.java
 /home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Tabuleiro.java
+/home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Jogador/Jogador.java
 /home/devaws/projetos/seuPrimeiroMilhao/src/main/java/dominio/Proprietario.java

@@ -18,15 +18,16 @@ public class Propriedade {
   }
 
   public void inserir(Proprietario proprietario) {
-    new ExcecaoDeDominio()
-        .quando(getEstaVendida(),
-            String.format("Esta propriedade pertence a um proprietário"))
-        .entaoDispara();
-
-    this.proprietario = proprietario;
+    if(!estaVendida()) {
+      this.proprietario = proprietario;
+    }
   }
 
-  public boolean getEstaVendida() {
+  public boolean estaVendida() {
     return null != this.proprietario;
+  }
+
+  public void removerProprietario() {
+    this.proprietario = null;
   }
 }

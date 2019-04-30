@@ -1,27 +1,32 @@
-package dominio;
+package dominio.Jogador;
 
+import dominio.Propriedade;
+import dominio.Proprietario;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 
 @Getter
-public class Jogador extends Proprietario{
-  private final TipoDeJogador tipoDeJogador;
+public abstract class Jogador extends Proprietario {
   private BigDecimal saldo;
   private int numeroDaCasa;
+  private Boolean estaFalido;
 
-  public Jogador(String nome, TipoDeJogador tipoDeJogador) {
+  public Jogador(String nome) {
     super(nome);
     this.saldo = BigDecimal.valueOf(300);
-    this.tipoDeJogador = tipoDeJogador;
     this.numeroDaCasa = 0;
+    this.estaFalido = false;
   }
 
+  public abstract Boolean deveComprar(Propriedade propriedade);
+
   public void debitar(BigDecimal valor) {
-    new ExcecaoDeDominio()
-        .quando(valor.compareTo(saldo) > 0, "Não há saldo suficiente")
-        .entaoDispara();
+
     saldo = saldo.subtract(valor);
+    if (BigDecimal.ZERO.compareTo(saldo) == 1) {
+      estaFalido = true;
+    }
   }
 
   public void depositar(BigDecimal valorDoAluguel) {

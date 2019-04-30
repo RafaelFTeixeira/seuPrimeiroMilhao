@@ -42,12 +42,4 @@ public class PropriedadeTest {
 
     Assert.assertEquals(proprietario, propriedade.getProprietario());
   }
-
-  @Test(expected = ExcecaoDeDominio.class)
-  public void nao_deve_vender_uma_propriedade_quando_ha_um_proprietario() {
-    Proprietario proprietario = new Proprietario("Alex");
-    propriedade.inserir(proprietario);
-
-    propriedade.inserir(proprietario);
-  }
 }
