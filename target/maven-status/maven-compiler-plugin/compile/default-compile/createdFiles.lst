@@ -3,6 +3,6 @@ dominio/Propriedade.class
 dominio/Tabuleiro.class
 dominio/Jogador/Cauteloso.class
 dominio/Proprietario.class
-dominio/Jogador/Aleatorio.class
 dominio/Jogador/Jogador.class
+dominio/Jogador/Aleatorio.class
 dominio/Jogador/Impulsivo.class

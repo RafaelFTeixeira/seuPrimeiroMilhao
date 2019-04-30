@@ -55,6 +55,9 @@ public class TabuleiroTest {
 
     tabuleiro.iniciar();
 
-    Assert.assertTrue(tabuleiro.getJogadores().stream().filter(j -> j.getSaldo().compareTo(BigDecimal.ZERO) == 1).count() == 1);
+    long quantidadeDeJogadorComSaldoPositivo = tabuleiro.getJogadores().stream()
+        .filter(j -> j.getSaldo().compareTo(BigDecimal.ZERO) == 1)
+        .count();
+    Assert.assertTrue(quantidadeDeJogadorComSaldoPositivo == 1);
   }
 }
