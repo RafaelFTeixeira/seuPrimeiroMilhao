@@ -1,10 +1,11 @@
 package dominio;
 
-import dominio.Jogador.Jogador;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
+
+import dominio.jogador.Jogador;
 
 @Getter
 public class Tabuleiro {

@@ -1,6 +1,6 @@
 package dominio;
 
-import dominio.Jogador.*;
+import dominio.jogador.*;
 import org.junit.Assert;
 import org.junit.Test;
 

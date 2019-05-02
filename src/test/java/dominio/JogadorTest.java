@@ -1,7 +1,7 @@
 package dominio;
 
-import dominio.Jogador.Impulsivo;
-import dominio.Jogador.Jogador;
+import dominio.jogador.Impulsivo;
+import dominio.jogador.Jogador;
 import org.junit.Assert;
 import org.junit.Test;
 

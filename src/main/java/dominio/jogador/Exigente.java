@@ -1,4 +1,4 @@
-package dominio.Jogador;
+package dominio.jogador;
 
 import dominio.Propriedade;
 

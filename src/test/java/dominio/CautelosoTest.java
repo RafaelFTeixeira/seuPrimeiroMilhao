@@ -1,6 +1,6 @@
 package dominio;
 
-import dominio.Jogador.Cauteloso;
+import dominio.jogador.Cauteloso;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
