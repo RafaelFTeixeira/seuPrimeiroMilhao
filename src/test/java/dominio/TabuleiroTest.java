@@ -30,26 +30,26 @@ public class TabuleiroTest {
     Exigente exigente = new Exigente("Fabio");
     List<Jogador> jogadores = Arrays.asList(impulsivo, cauteloso, aleatorio, exigente);
     List<Propriedade> propriedades = Arrays.asList(
-        new Propriedade("A", BigDecimal.valueOf(60), BigDecimal.valueOf(15)),
-        new Propriedade("B", BigDecimal.valueOf(150), BigDecimal.valueOf(30)),
-        new Propriedade("C", BigDecimal.valueOf(250), BigDecimal.valueOf(40)),
-        new Propriedade("D", BigDecimal.valueOf(350), BigDecimal.valueOf(60)),
-        new Propriedade("E", BigDecimal.valueOf(450), BigDecimal.valueOf(80)),
-        new Propriedade("F", BigDecimal.valueOf(550), BigDecimal.valueOf(100)),
-        new Propriedade("G", BigDecimal.valueOf(80), BigDecimal.valueOf(15)),
-        new Propriedade("H", BigDecimal.valueOf(120), BigDecimal.valueOf(25)),
-        new Propriedade("I", BigDecimal.valueOf(300), BigDecimal.valueOf(50)),
-        new Propriedade("J", BigDecimal.valueOf(120), BigDecimal.valueOf(15)),
-        new Propriedade("H", BigDecimal.valueOf(60), BigDecimal.valueOf(15)),
-        new Propriedade("K", BigDecimal.valueOf(70), BigDecimal.valueOf(20)),
-        new Propriedade("L", BigDecimal.valueOf(90), BigDecimal.valueOf(25)),
-        new Propriedade("M", BigDecimal.valueOf(110), BigDecimal.valueOf(35)),
-        new Propriedade("N", BigDecimal.valueOf(100), BigDecimal.valueOf(30)),
-        new Propriedade("O", BigDecimal.valueOf(140), BigDecimal.valueOf(40)),
-        new Propriedade("P", BigDecimal.valueOf(50), BigDecimal.valueOf(10)),
-        new Propriedade("Q", BigDecimal.valueOf(75), BigDecimal.valueOf(25)),
-        new Propriedade("R", BigDecimal.valueOf(95), BigDecimal.valueOf(30)),
-        new Propriedade("S", BigDecimal.valueOf(665), BigDecimal.valueOf(150))
+        new Propriedade("A", BigDecimal.valueOf(60), BigDecimal.valueOf(35)),
+        new Propriedade("B", BigDecimal.valueOf(150), BigDecimal.valueOf(60)),
+        new Propriedade("C", BigDecimal.valueOf(250), BigDecimal.valueOf(80)),
+        new Propriedade("D", BigDecimal.valueOf(350), BigDecimal.valueOf(120)),
+        new Propriedade("E", BigDecimal.valueOf(450), BigDecimal.valueOf(160)),
+        new Propriedade("F", BigDecimal.valueOf(550), BigDecimal.valueOf(200)),
+        new Propriedade("G", BigDecimal.valueOf(80), BigDecimal.valueOf(30)),
+        new Propriedade("H", BigDecimal.valueOf(120), BigDecimal.valueOf(50)),
+        new Propriedade("I", BigDecimal.valueOf(300), BigDecimal.valueOf(100)),
+        new Propriedade("J", BigDecimal.valueOf(120), BigDecimal.valueOf(50)),
+        new Propriedade("H", BigDecimal.valueOf(60), BigDecimal.valueOf(30)),
+        new Propriedade("K", BigDecimal.valueOf(70), BigDecimal.valueOf(40)),
+        new Propriedade("L", BigDecimal.valueOf(90), BigDecimal.valueOf(50)),
+        new Propriedade("M", BigDecimal.valueOf(110), BigDecimal.valueOf(70)),
+        new Propriedade("N", BigDecimal.valueOf(100), BigDecimal.valueOf(60)),
+        new Propriedade("O", BigDecimal.valueOf(140), BigDecimal.valueOf(80)),
+        new Propriedade("P", BigDecimal.valueOf(50), BigDecimal.valueOf(20)),
+        new Propriedade("Q", BigDecimal.valueOf(75), BigDecimal.valueOf(30)),
+        new Propriedade("R", BigDecimal.valueOf(95), BigDecimal.valueOf(60)),
+        new Propriedade("S", BigDecimal.valueOf(665), BigDecimal.valueOf(300))
     );
     Tabuleiro tabuleiro = new Tabuleiro(propriedades, jogadores);
 
