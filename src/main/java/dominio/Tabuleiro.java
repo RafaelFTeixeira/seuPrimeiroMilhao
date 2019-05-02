@@ -10,6 +10,7 @@ import dominio.jogador.Jogador;
 
 @Getter
 public class Tabuleiro {
+  private static final int partidaMilesima = 1000;
   private Integer indiceVezDeJogar = 0;
   private List<Jogador> jogadores;
   private Integer quantidadeDeJogadoresAtivo;
@@ -25,7 +26,7 @@ public class Tabuleiro {
   }
 
   public void iniciar() {
-    while(quantidadeDeJogadoresAtivo > 1 && numeroDaPartida < 1000) {
+    while (quantidadeDeJogadoresAtivo > 1 && numeroDaPartida < partidaMilesima) {
       Jogador vezDoJogador = jogadores.get(indiceVezDeJogar);
 
       if (!vezDoJogador.getEstaFalido()) {
@@ -35,7 +36,7 @@ public class Tabuleiro {
       atualizarIndiceDaVezDeJogar();
       numeroDaPartida++;
     }
-    
+
     vencedor = jogadores.stream()
       .max(Comparator.comparing(Jogador::getSaldo)).get();
   }
