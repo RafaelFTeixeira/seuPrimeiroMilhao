@@ -42,4 +42,28 @@ public class PropriedadeTest {
 
     Assert.assertEquals(proprietario, propriedade.getProprietario());
   }
+
+  @Test
+  public void deve_esta_vendida_se_tiver_proprietario() {
+    Proprietario proprietario = new Proprietario("Alex");
+
+    propriedade.inserir(proprietario);
+
+    Assert.assertTrue(propriedade.estaVendida());
+  }
+
+  @Test
+  public void nao_deve_esta_vendida_se_nao_tiver_proprietario() {
+    Assert.assertFalse(propriedade.estaVendida());
+  }
+
+  @Test
+  public void deve_remover_a_propriedade() {
+    Proprietario proprietario = new Proprietario("Alex");
+    propriedade.inserir(proprietario);
+
+    propriedade.removerProprietario();
+
+    Assert.assertFalse(propriedade.estaVendida());
+  }
 }
