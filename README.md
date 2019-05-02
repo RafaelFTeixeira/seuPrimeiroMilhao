@@ -4,19 +4,19 @@
 
 ## O Desafio
 Considere o seguinte jogo hipotético, que chamaremos de SeuPrimeiroMilhao,
-muito semelhante a Banco Imobiliário 1 onde várias de suas mecânicas foram
-simplificadas. Numa partida desse jogo, os players se alteram em rodadas, numa
+muito semelhante a Banco Imobiliário, onde várias de suas mecânicas foram
+simplificadas. Numa partida desse jogo, os jogadores se alteram em rodadas, numa
 ordem definida aleatoriamente no começo da partida. Os jogadores sempre começam
 uma partida com saldo de 300 para cada um.
 
 
-Nesse jogo, o tabuleiro é composto por 20 propriedades em sequência. Cada casa tem
+Nesse jogo, o tabuleiro é composto por 20 propriedades em sequência. Cada propriedade tem
 um custo de venda, um valor de aluguel, um proprietário caso já estejam compradas, e seguem
 uma determinada ordem no tabuleiro. Em SeuPrimeiroMilhao, não é possível
 construir hotéis e nenhuma outra melhoria sobre as propriedades do tabuleiro, por
 simplicidade do problema.
 
-O valor de venda e de aluguel de todas as 20 propriedades são configurados num
+O valor de venda e de aluguel de todas as 20 propriedades são configurados em um
 arquivo de nome `gameConfig.txt`, que seu programa deve ler e interpretar. Os
 detalhes sobre a formatação do arquivo se encontram na seção Entrada.
 
@@ -40,12 +40,11 @@ Cada um dos jogadores tem uma implementação de comportamento diferente,
 que dita as ações que eles vão tomar ao longo do jogo. Mais detalhes sobre o
 comportamento serão explicados mais à frente.
 
-Um jogador que fica com saldo negativo perde o jogo, e não joga mais até o final
-da partida. Suas propriedades voltam a ficar sem dono e portanto podem ser
-compradas por qualquer jogador.
+Um jogador que fica com saldo negativo perde o jogo, e não joga mais. 
+Perde suas propriedades e portanto podem ser compradas por qualquer outro jogador.
 
-SeuPrimeiroMilhao termina quando restar somente um player com dinheiro, a
-qualquer momento da partida. Esse player é declarado o vencedor.
+SeuPrimeiroMilhao termina quando restar somente um jogador com saldo positivo, a
+qualquer momento da partida. Esse jogador é declarado o vencedor.
 
 Desejamos rodar uma simulação sobre SeuPrimeiroMilhao para decidir qual a melhor
 estratégia. Para isso, idealizamos uma partida com 4 diferentes tipos de possíveis
@@ -71,7 +70,7 @@ O jogador *aleatório* compra a propriedade que ele parar em cima com
 probabilidade de 50%.
 
 Caso o jogo demore muito, como é de costume em jogos dessa natureza, o jogo
-termina na milésima rodada com a vitória do jogador com mais coins. O critério
+termina na milésima rodada com a vitória do jogador com mais saldo. O critério
 de desempate é a ordem de turno dos jogadores nesta partida.
 
 Dados esse padrão de comportamento dos jogadores e das regras de
@@ -107,7 +106,7 @@ Uma execução do programa proposto deve rodar 300 simulações de
 SeuPrimeiroMilhao, imprimindo no console os dados referentes às execuções.
 Esperamos encontrar nos dados as seguintes informações:
 
-+ Quantas partidas terminam por time out (1000 rodadas);
++ Quantas partidas terminam por _time out_ (1000 rodadas);
 
 + Quantos turnos em média demora uma partida;
 
