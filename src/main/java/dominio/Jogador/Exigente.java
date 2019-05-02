@@ -12,6 +12,6 @@ public class Exigente extends Jogador {
   @Override
   public Boolean deveComprar(Propriedade propriedade) {
     return this.getSaldo().compareTo(propriedade.getValorDaVenda()) >= 0
-        && propriedade.getValorDoAluguel().compareTo(BigDecimal.valueOf(50)) > 0;
+        && propriedade.getValorDoAluguel().compareTo(BigDecimal.valueOf(50)) >= 0;
   }
 }

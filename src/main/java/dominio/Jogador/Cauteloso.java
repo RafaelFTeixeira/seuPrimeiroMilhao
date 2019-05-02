@@ -12,6 +12,6 @@ public class Cauteloso extends Jogador {
   @Override
   public Boolean deveComprar(Propriedade propriedade) {
     return this.getSaldo().compareTo(propriedade.getValorDaVenda()) >= 0
-        && this.getSaldo().subtract(propriedade.getValorDaVenda()).compareTo(BigDecimal.valueOf(80)) > 0;
+        && this.getSaldo().subtract(propriedade.getValorDaVenda()).compareTo(BigDecimal.valueOf(80)) >= 0;
   }
 }

@@ -1,5 +1,7 @@
+dominio/ExigenteTest.class
+dominio/CautelosoTest.class
 dominio/ProprietarioTest.class
+dominio/JogadorTest.class
 dominio/ImpusilvoTest.class
 dominio/TabuleiroTest.class
-dominio/JogadorTest.class
 dominio/PropriedadeTest.class
