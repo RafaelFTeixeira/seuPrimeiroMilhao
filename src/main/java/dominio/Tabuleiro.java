@@ -3,6 +3,7 @@ package dominio;
 import lombok.Getter;
 
 import java.math.BigDecimal;
+import java.util.Comparator;
 import java.util.List;
 
 import dominio.jogador.Jogador;
@@ -14,24 +15,33 @@ public class Tabuleiro {
   private Integer quantidadeDeJogadoresAtivo;
   private List<Propriedade> propriedades;
   private Jogador vencedor;
+  private Integer numeroDaPartida;
 
   public Tabuleiro(List<Propriedade> propriedades, List<Jogador> jogadores) {
     this.propriedades = propriedades;
     this.jogadores = jogadores;
     this.quantidadeDeJogadoresAtivo = jogadores.size();
+    this.numeroDaPartida = 0;
   }
 
   public void iniciar() {
-    while(quantidadeDeJogadoresAtivo > 1) {
+    while(quantidadeDeJogadoresAtivo > 1 && numeroDaPartida < 1000) {
       Jogador vezDoJogador = jogadores.get(indiceVezDeJogar);
 
       if (!vezDoJogador.getEstaFalido()) {
         jogar(vezDoJogador);
       }
 
-      indiceVezDeJogar = jogadores.size() - 1 == indiceVezDeJogar ? 0 : indiceVezDeJogar + 1;
+      atualizarIndiceDaVezDeJogar();
+      numeroDaPartida++;
     }
-    vencedor = jogadores.stream().filter(j -> j.getSaldo().compareTo(BigDecimal.ZERO) == 1).findFirst().get();
+    
+    vencedor = jogadores.stream()
+      .max(Comparator.comparing(Jogador::getSaldo)).get();
+  }
+
+  private void atualizarIndiceDaVezDeJogar() {
+    indiceVezDeJogar = jogadores.size() - 1 == indiceVezDeJogar ? 0 : indiceVezDeJogar + 1;
   }
 
   private void removerPropriedadesDoJogadorQuandoEstiverFalido(Jogador jogador) {

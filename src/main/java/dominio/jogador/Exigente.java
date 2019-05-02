@@ -1,9 +1,11 @@
 package dominio.jogador;
 
 import dominio.Propriedade;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 
+@Getter
 public class Exigente extends Jogador {
   public Exigente(String nome) {
     super(nome);

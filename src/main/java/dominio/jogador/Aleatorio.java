@@ -1,7 +1,9 @@
 package dominio.jogador;
 
 import dominio.Propriedade;
+import lombok.Getter;
 
+@Getter
 public class Aleatorio extends Jogador {
   public Aleatorio(String nome) {
     super(nome);

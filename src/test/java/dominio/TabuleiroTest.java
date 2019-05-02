@@ -23,6 +23,46 @@ public class TabuleiroTest {
   }
 
   @Test
+  public void deve_vencer_o_jogador_que_tiver_maior_saldo_apos_da_milésima_partida() {
+    Impulsivo impulsivo = new Impulsivo("Rafael");
+    Cauteloso cauteloso = new Cauteloso("Dantas");
+    Aleatorio aleatorio = new Aleatorio("Alex");
+    Exigente exigente = new Exigente("Fabio");
+    cauteloso.depositar(BigDecimal.valueOf(2000));
+    List<Jogador> jogadores = Arrays.asList(impulsivo, cauteloso, aleatorio, exigente);
+    List<Propriedade> propriedades = Arrays.asList(
+        new Propriedade("A", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("B", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("C", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("D", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("E", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("F", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("G", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("H", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("I", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("J", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("H", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("K", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("L", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("M", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("N", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("O", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("P", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("Q", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("R", BigDecimal.valueOf(60), BigDecimal.valueOf(5)),
+        new Propriedade("S", BigDecimal.valueOf(60), BigDecimal.valueOf(5))
+    );
+    Tabuleiro tabuleiro = new Tabuleiro(propriedades, jogadores);
+    Integer numeroDaPartida = 1000;
+
+    tabuleiro.iniciar();
+
+    Jogador jogadorVencedor = tabuleiro.getVencedor();
+    Assert.assertEquals(cauteloso, jogadorVencedor);
+    Assert.assertEquals(numeroDaPartida, tabuleiro.getNumeroDaPartida());
+  }
+
+  @Test
   public void deve_vencer_apenas_um_jogador() {
     Impulsivo impulsivo = new Impulsivo("Rafael");
     Cauteloso cauteloso = new Cauteloso("Dantas");
