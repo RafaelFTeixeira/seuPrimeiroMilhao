@@ -120,5 +120,5 @@ Esperamos encontrar nos dados as seguintes informações:
 Nós da Brasilprev gostaríamos de analisar sua solução do nosso desafio! Por isso,
 pedimos para que você envie um zip com os arquivos que compõem sua resposta de
 volta para o email de contato com o departamento de Recursos Humanos. Por favor,
-coloque também um arquivo README com instruções de execução/compilação, e
+crie um arquivo COMMENTS.md com instruções de execução/compilação, e
 quaisquer observações que você achar relevante!
