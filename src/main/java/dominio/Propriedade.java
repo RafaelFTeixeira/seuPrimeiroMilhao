@@ -18,7 +18,7 @@ public class Propriedade {
   }
 
   public void inserir(Proprietario proprietario) {
-    if(!estaVendida()) {
+    if (!estaVendida()) {
       this.proprietario = proprietario;
     }
   }

@@ -37,8 +37,7 @@ public class Tabuleiro {
       numeroDaPartida++;
     }
 
-    vencedor = jogadores.stream()
-      .max(Comparator.comparing(Jogador::getSaldo)).get();
+    vencedor = jogadores.stream().max(Comparator.comparing(Jogador::getSaldo)).get();
   }
 
   private void atualizarIndiceDaVezDeJogar() {
@@ -46,16 +45,15 @@ public class Tabuleiro {
   }
 
   private void removerPropriedadesDoJogadorQuandoEstiverFalido(Jogador jogador) {
-    if(jogador.getEstaFalido()) {
-      propriedades.stream()
-          .filter(p -> p.estaVendida() && jogador.getNome() == p.getProprietario().getNome())
+    if (jogador.getEstaFalido()) {
+      propriedades.stream().filter(p -> p.estaVendida() && jogador.getNome() == p.getProprietario().getNome())
           .forEach(p -> p.removerProprietario());
       quantidadeDeJogadoresAtivo--;
     }
   }
 
   private Integer rodarDado() {
-    return (int)(Math.random() * 6 + 1);
+    return (int) (Math.random() * 6 + 1);
   }
 
   private void jogar(Jogador jogador) {
@@ -78,29 +76,19 @@ public class Tabuleiro {
   }
 
   private void pagarAluguelQuandoNaoForProprietario(Jogador jogador, Propriedade propriedade) {
-    Boolean devePagarAluguel = propriedade.estaVendida() && jogador.getNome() != propriedade.getProprietario().getNome();
-    if(devePagarAluguel) {
-      pagarAluguelDaPropriedade(jogador, propriedade);
+    Boolean devePagarAluguel = propriedade.estaVendida()
+        && jogador.getNome() != propriedade.getProprietario().getNome();
+    if (devePagarAluguel) {
+      obter(jogador).debitar(propriedade.getValorDoAluguel());
+      obterJogadorPor(propriedade.getProprietario().getNome()).depositar(propriedade.getValorDoAluguel());
     }
   }
 
   private void comprarPropriedadeQuandoNaoEstiverProprietario(Jogador jogador, Propriedade propriedade) {
-    if (jogador.deveComprar(propriedade)) {
-      comprarPropriedade(propriedade, jogador);
-    }
-  }
-
-  public void comprarPropriedade(Propriedade propriedade, Jogador jogador) {
-    if(!propriedade.estaVendida()) {
+    if (jogador.deveComprar(propriedade) && !propriedade.estaVendida()) {
       obter(jogador).debitar(propriedade.getValorDaVenda());
       obter(propriedade).inserir(jogador);
     }
-  }
-
-  public void pagarAluguelDaPropriedade(Jogador jogador, Propriedade propriedade) {
-    obter(jogador).debitar(propriedade.getValorDoAluguel());
-    obterJogadorPor(propriedade.getProprietario().getNome())
-        .depositar(propriedade.getValorDoAluguel());
   }
 
   private Jogador obter(Jogador jogador) {
@@ -108,14 +96,10 @@ public class Tabuleiro {
   }
 
   private Propriedade obter(Propriedade propriedade) {
-    return propriedades.stream()
-        .filter(p -> p.getNome().equals(propriedade.getNome()))
-        .findFirst().get();
+    return propriedades.stream().filter(p -> p.getNome().equals(propriedade.getNome())).findFirst().get();
   }
 
   private Jogador obterJogadorPor(String nome) {
-    return jogadores.stream()
-        .filter(j -> j.getNome().equals(nome))
-        .findFirst().get();
+    return jogadores.stream().filter(j -> j.getNome().equals(nome)).findFirst().get();
   }
 }

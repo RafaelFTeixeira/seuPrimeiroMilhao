@@ -1,7 +1,6 @@
 package dominio;
 
 import dominio.jogador.Exigente;
-import dominio.jogador.Impulsivo;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
