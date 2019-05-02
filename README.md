@@ -2,7 +2,7 @@
   O teste oferecido a seguir é um desafio que deve ser codificado em uma linguagem de
   sua preferência.
 
-# O Desafio
+## O Desafio
 Considere o seguinte jogo hipotético, que chamaremos de SeuPrimeiroMilhao,
 muito semelhante a Banco Imobiliário 1 onde várias de suas mecânicas foram
 simplificadas. Numa partida desse jogo, os players se alteram em rodadas, numa
@@ -23,14 +23,14 @@ detalhes sobre a formatação do arquivo se encontram na seção Entrada.
 No começo da sua vez, o jogador joga um dado equiprovável de 6 faces que determina
 quantas espaços no tabuleiro o jogador vai andar.
 
-● Ao cair em uma propriedade sem proprietário, o jogador pode escolher entre
++ Ao cair em uma propriedade sem proprietário, o jogador pode escolher entre
 comprar ou não a propriedade. Esse é a única forma pela qual uma propriedade
 pode ser comprada.
 
-● Ao cair em uma propriedade que tem proprietário, ele deve pagar ao proprietário o valor do
++ Ao cair em uma propriedade que tem proprietário, ele deve pagar ao proprietário o valor do
 aluguel da propriedade.
 
-● Ao completar uma volta no tabuleiro, o jogador ganha 100 de saldo.
++ Ao completar uma volta no tabuleiro, o jogador ganha 100 de saldo.
 
 Jogadores só podem comprar propriedades caso ela não tenha dono e o jogador
 tenha o dinheiro da venda. Ao comprar uma propriedade, o jogador perde o
@@ -51,13 +51,13 @@ Desejamos rodar uma simulação sobre SeuPrimeiroMilhao para decidir qual a melh
 estratégia. Para isso, idealizamos uma partida com 4 diferentes tipos de possíveis
 jogadores. Os comportamentos definidos são:
 
-● O jogador um é impulsivo;
++ O jogador um é impulsivo;
 
-● O jogador dois é exigente;
++ O jogador dois é exigente;
 
-● O jogador três é cauteloso;
++ O jogador três é cauteloso;
 
-● O jogador quatro é aleatório;
++ O jogador quatro é aleatório;
 
 O jogador *impulsivo* compra qualquer propriedade sobre a qual ele parar.
 
@@ -77,13 +77,13 @@ de desempate é a ordem de turno dos jogadores nesta partida.
 Dados esse padrão de comportamento dos jogadores e das regras de
 SeuPrimeiroMilhao, queremos saber o seguinte:
 
-● Em 300 partidas, qual a distribuição de vitória por comportamento de
++ Em 300 partidas, qual a distribuição de vitória por comportamento de
 jogador? Existe algum comportamento que ganha mais que os outros?
 
-● Em média, quantas rodadas o jogo demora para terminar? Quantas partidas
++ Em média, quantas rodadas o jogo demora para terminar? Quantas partidas
 de SeuPrimeiroMilhao terminam pelo critério de tempo?
 
-# Entrada
+### Entrada
 
 Nesta seção definiremos qual o padrão esperado para o arquivo de entrada
 `gameConfig.txt`, que dita o preço de venda e aluguel das propriedades. Esse arquivo
@@ -101,21 +101,21 @@ propriedade e o segundo é o seu valor de aluguel.
 Dentro do conteúdo da pasta do desafio se encontra um exemplo de arquivo de entrada
 que pode ser usado para rodar seu programa.
 
-# Saída
+### Saída
 
 Uma execução do programa proposto deve rodar 300 simulações de
 SeuPrimeiroMilhao, imprimindo no console os dados referentes às execuções.
 Esperamos encontrar nos dados as seguintes informações:
 
-● Quantas partidas terminam por time out (1000 rodadas);
++ Quantas partidas terminam por time out (1000 rodadas);
 
-● Quantos turnos em média demora uma partida;
++ Quantos turnos em média demora uma partida;
 
-● Qual a porcentagem de vitórias por comportamento dos jogadores;
++ Qual a porcentagem de vitórias por comportamento dos jogadores;
 
-● Qual o comportamento que mais vence.
++ Qual o comportamento que mais vence.
 
-# Envio da Resposta
+### Envio da Resposta
 
 Nós da Brasilprev gostaríamos de analisar sua solução do nosso desafio! Por isso,
 pedimos para que você envie um zip com os arquivos que compõem sua resposta de
