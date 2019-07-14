@@ -1,7 +1,3 @@
-# Desafio BrasilPrev
-  O teste oferecido a seguir é um desafio que deve ser codificado em uma linguagem de
-  sua preferência.
-
 ## O Desafio
 Considere o seguinte jogo hipotético, que chamaremos de SeuPrimeiroMilhao,
 muito semelhante a Banco Imobiliário, onde várias de suas mecânicas foram
@@ -114,10 +110,3 @@ Esperamos encontrar nos dados as seguintes informações:
 
 + Qual o comportamento que mais vence.
 
-### Envio da Resposta
-
-Nós da Brasilprev gostaríamos de analisar sua solução do nosso desafio! Por isso,
-pedimos para que você envie um zip com os arquivos que compõem sua resposta de
-volta para o email de contato com o departamento de Recursos Humanos. Por favor,
-crie um arquivo `COMMENTS.md` com instruções de execução/compilação, e
-quaisquer observações que você achar relevante!
